@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modules &mdash; scsilhouette  documentation</title>
+  <title>scsilhouette &mdash; scsilhouette  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -20,7 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="scsilhouette documentation" href="index.html" /> 
+    <link rel="next" title="scsilhouette package" href="scsilhouette.html" />
+    <link rel="prev" title="Process Overview" href="process.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,10 +45,27 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#scsilhouette.compute.run_silhouette"><code class="docutils literal notranslate"><span class="pre">run_silhouette()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="process.html">Process Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="process.html#usage-workflow">Usage Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html#f-score-format">F-Score Format</a></li>
 </ul>
 </li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">scsilhouette</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scsilhouette.html">scsilhouette package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scsilhouette.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.cli.html">scsilhouette.cli module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.compute.html">scsilhouette.compute module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.download.html">scsilhouette.download module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.nsforest.html">scsilhouette.nsforest module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.viz.html">scsilhouette.viz module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scsilhouette.html#module-scsilhouette">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="click.html">Click Interface</a></li>
 </ul>
 
         </div>
@@ -64,7 +82,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Modules</li>
+      <li class="breadcrumb-item active">scsilhouette</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -74,20 +92,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-scsilhouette.compute">
-<span id="modules"></span><h1>Modules<a class="headerlink" href="#module-scsilhouette.compute" title="Link to this heading"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="scsilhouette.compute.run_silhouette">
-<span class="sig-prename descclassname"><span class="pre">scsilhouette.compute.</span></span><span class="sig-name descname"><span class="pre">run_silhouette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h5ad_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_obs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_cluster_summary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_csv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_plots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qc_correlations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_pca_dims</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/scsilhouette/compute.html#run_silhouette"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scsilhouette.compute.run_silhouette" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<span class="target" id="module-scsilhouette.cli"><span id="module-scsilhouette.viz"></span><span id="module-scsilhouette.download"></span></span></section>
+  <section id="scsilhouette">
+<h1>scsilhouette<a class="headerlink" href="#scsilhouette" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="scsilhouette.html">scsilhouette package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scsilhouette.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scsilhouette.cli.html">scsilhouette.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scsilhouette.compute.html">scsilhouette.compute module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.compute.html#scsilhouette.compute.compute_fscore_correlation"><code class="docutils literal notranslate"><span class="pre">compute_fscore_correlation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.compute.html#scsilhouette.compute.run_silhouette"><code class="docutils literal notranslate"><span class="pre">run_silhouette()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scsilhouette.download.html">scsilhouette.download module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.download.html#scsilhouette.download.download_h5ad"><code class="docutils literal notranslate"><span class="pre">download_h5ad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.download.html#scsilhouette.download.get_filename_from_url"><code class="docutils literal notranslate"><span class="pre">get_filename_from_url()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scsilhouette.nsforest.html">scsilhouette.nsforest module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.nsforest.html#scsilhouette.nsforest.load_nsforest_fscore"><code class="docutils literal notranslate"><span class="pre">load_nsforest_fscore()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scsilhouette.viz.html">scsilhouette.viz module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.viz.html#scsilhouette.viz.plot_all"><code class="docutils literal notranslate"><span class="pre">plot_all()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.viz.html#scsilhouette.viz.plot_cluster_size_vs_score"><code class="docutils literal notranslate"><span class="pre">plot_cluster_size_vs_score()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.viz.html#scsilhouette.viz.plot_cluster_summary"><code class="docutils literal notranslate"><span class="pre">plot_cluster_summary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.viz.html#scsilhouette.viz.plot_fscore_vs_silhouette"><code class="docutils literal notranslate"><span class="pre">plot_fscore_vs_silhouette()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.viz.html#scsilhouette.viz.plot_qc_boxplots"><code class="docutils literal notranslate"><span class="pre">plot_qc_boxplots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scsilhouette.viz.html#scsilhouette.viz.plot_score_distribution"><code class="docutils literal notranslate"><span class="pre">plot_score_distribution()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scsilhouette.html#module-scsilhouette">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="scsilhouette documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="process.html" class="btn btn-neutral float-left" title="Process Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scsilhouette.html" class="btn btn-neutral float-right" title="scsilhouette package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

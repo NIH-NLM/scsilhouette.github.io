@@ -42,10 +42,27 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../modules.html">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../modules.html#scsilhouette.compute.run_silhouette"><code class="docutils literal notranslate"><span class="pre">run_silhouette()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../process.html">Process Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../process.html#usage-workflow">Usage Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process.html#f-score-format">F-Score Format</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">scsilhouette</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../scsilhouette.html">scsilhouette package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../scsilhouette.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../scsilhouette.cli.html">scsilhouette.cli module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scsilhouette.compute.html">scsilhouette.compute module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scsilhouette.download.html">scsilhouette.download module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scsilhouette.nsforest.html">scsilhouette.nsforest module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scsilhouette.viz.html">scsilhouette.viz module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../scsilhouette.html#module-scsilhouette">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../click.html">Click Interface</a></li>
 </ul>
 
         </div>
@@ -80,13 +97,13 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">urllib.parse</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlparse</span>
 
 <div class="viewcode-block" id="get_filename_from_url">
-<a class="viewcode-back" href="../../scsilhouette.html#scsilhouette.download.get_filename_from_url">[docs]</a>
+<a class="viewcode-back" href="../../scsilhouette.download.html#scsilhouette.download.get_filename_from_url">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_filename_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">path</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="download_h5ad">
-<a class="viewcode-back" href="../../scsilhouette.html#scsilhouette.download.download_h5ad">[docs]</a>
+<a class="viewcode-back" href="../../scsilhouette.download.html#scsilhouette.download.download_h5ad">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">download_h5ad</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">filename</span> <span class="o">=</span> <span class="n">get_filename_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>

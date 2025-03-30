@@ -4,37 +4,14 @@ scsilhouette package
 Submodules
 ----------
 
-scsilhouette.cli module
------------------------
+.. toctree::
+   :maxdepth: 4
 
-.. automodule:: scsilhouette.cli
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-scsilhouette.compute module
----------------------------
-
-.. automodule:: scsilhouette.compute
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-scsilhouette.download module
-----------------------------
-
-.. automodule:: scsilhouette.download
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-scsilhouette.viz module
------------------------
-
-.. automodule:: scsilhouette.viz
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   scsilhouette.cli
+   scsilhouette.compute
+   scsilhouette.download
+   scsilhouette.nsforest
+   scsilhouette.viz
 
 Module contents
 ---------------
